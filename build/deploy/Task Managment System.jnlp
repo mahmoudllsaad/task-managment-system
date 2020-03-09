@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Task Managment System.jnlp">
+  <information>
+    <title>Task Managment System</title>
+    <vendor>MahmoudSaad</vendor>
+    <description>TaskManagmentSystem</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="libs\commons-collections4-4.1.jar" size="751238" download="eager" />
+    <jar href="libs\mysql-connector-java-8.0.18.jar" size="2330539" download="eager" />
+    <jar href="libs\ooxml-schemas-1.0.jar" size="14003759" download="eager" />
+    <jar href="libs\poi-3.17.jar" size="2701171" download="eager" />
+    <jar href="libs\poi-ooxml-3.17.jar" size="1479023" download="eager" />
+    <jar href="libs\xmlbeans-2.3.0.jar" size="2666695" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="task.managment.admin.MainLogin"  name="TaskManagmentSystem" />
+  <update check="background"/>
+</jnlp>
