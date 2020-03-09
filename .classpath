@@ -3,11 +3,11 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Mahmoud Saad/Downloads/poi-ooxml-3.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Mahmoud Saad/Downloads/poi-3.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Mahmoud Saad/Downloads/mysql-connector-java-8.0.18.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Mahmoud Saad/Downloads/xmlbeans-2.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Mahmoud Saad/Downloads/commons-collections4-4.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Mahmoud Saad/Downloads/ooxml-schemas-1.0.jar"/>
+	<classpathentry kind="lib" path="externalLibs/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="externalLibs/mysql-connector-java-8.0.18.jar"/>
+	<classpathentry kind="lib" path="externalLibs/ooxml-schemas-1.0.jar"/>
+	<classpathentry kind="lib" path="externalLibs/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="externalLibs/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="externalLibs/xmlbeans-2.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

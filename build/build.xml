@@ -20,33 +20,33 @@
 		<mkdir dir="externalLibs" />
 	
 		<copy todir="externalLibs">
-			<fileset dir="C:\Users\Mahmoud Saad\Downloads">
-				<filename name="mysql-connector-java-8.0.18.jar"/>
-			</fileset>
-		</copy>
-		<copy todir="externalLibs">
-			<fileset dir="C:\Users\Mahmoud Saad\Downloads">
-				<filename name="commons-collections4-4.1.jar"/>
-			</fileset>
-		</copy>
-		<copy todir="externalLibs">
-			<fileset dir="C:\Users\Mahmoud Saad\Downloads">
-				<filename name="poi-3.17.jar"/>
-			</fileset>
-		</copy>
-		<copy todir="externalLibs">
-			<fileset dir="C:\Users\Mahmoud Saad\Downloads">
-				<filename name="xmlbeans-2.3.0.jar"/>
-			</fileset>
-		</copy>
-		<copy todir="externalLibs">
-			<fileset dir="C:\Users\Mahmoud Saad\Downloads">
+			<fileset dir="C:\Users\Mahmoud Saad\eclipse-workspace\Task Managment System\externalLibs">
 				<filename name="poi-ooxml-3.17.jar"/>
 			</fileset>
 		</copy>
 		<copy todir="externalLibs">
-			<fileset dir="C:\Users\Mahmoud Saad\Downloads">
+			<fileset dir="C:\Users\Mahmoud Saad\eclipse-workspace\Task Managment System\externalLibs">
+				<filename name="xmlbeans-2.3.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Mahmoud Saad\eclipse-workspace\Task Managment System\externalLibs">
+				<filename name="poi-3.17.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Mahmoud Saad\eclipse-workspace\Task Managment System\externalLibs">
+				<filename name="mysql-connector-java-8.0.18.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Mahmoud Saad\eclipse-workspace\Task Managment System\externalLibs">
 				<filename name="ooxml-schemas-1.0.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Mahmoud Saad\eclipse-workspace\Task Managment System\externalLibs">
+				<filename name="commons-collections4-4.1.jar"/>
 			</fileset>
 		</copy>
 	
