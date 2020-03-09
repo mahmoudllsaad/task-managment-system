@@ -256,7 +256,7 @@ public class InsertUser extends Application {
 			statement.setString(2, email);
 			statement.setInt(3, phone);
 			statement.setInt(4, Integer.valueOf(rule.substring(rule.lastIndexOf("-") + 1)));
-			statement.setString(5, securePassword.concat("-".concat(salt)));
+			statement.setString(5, securePassword.concat("-").concat(salt));
 		    result = statement.executeUpdate();
 		    connection.commit();
 		} catch (SQLException e) {

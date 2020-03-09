@@ -25,6 +25,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import task.managment.database.connection.MySqlDatabaseConnection;
+import task.managment.encrypt.utils.PasswordUtils;
 import task.managment.login.username.LoginUserName;
 
 public class UpdateAccountPassword extends Application {
@@ -139,7 +140,10 @@ public class UpdateAccountPassword extends Application {
 			connection.setAutoCommit(false);
 
 			statement = connection.prepareStatement("UPDATE USER SET PASSWORD = ? WHERE USER_NAME = ?");
-			statement.setString(1, password);
+			String salt = PasswordUtils.getSalt(30);
+		    String securePassword = PasswordUtils.generateSecurePassword(password, salt);
+		    
+			statement.setString(1, securePassword.concat("-").concat(salt));
 			statement.setString(2, userName);
 
 			result = statement.executeUpdate();

@@ -13,6 +13,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.stage.Stage;
+import task.managment.agent.MainAgentScreen;
 import task.managment.database.connection.MySqlDatabaseConnection;
 import task.managment.encrypt.utils.PasswordUtils;
 import task.managment.login.username.LoginUserName;
@@ -34,6 +35,7 @@ import javafx.scene.text.TextAlignment;
 public class MainLogin extends Application {
 
 	List<String> Users = new ArrayList<String>();
+	int ruleId = 0;
 
 	public boolean getUsersAndPassword(String userName, String password) {
 
@@ -57,12 +59,15 @@ public class MainLogin extends Application {
 
 			while (result.next()) {
 				Users.add(result.getString("PASSWORD"));
+				Users.add(result.getString("USER_NAME"));
+
+				ruleId = result.getInt("RULES_ID");
 			}
 			if (!Users.isEmpty()) {
 
 				boolean passwordMatch = PasswordUtils.verifyUserPassword(password, Users.get(0).split("-")[0],
 						Users.get(0).split("-")[1]);
-				
+
 				if (!passwordMatch)
 					Users.clear();
 			}
@@ -87,7 +92,7 @@ public class MainLogin extends Application {
 		if (Users.isEmpty())
 			return false;
 
-		LoginUserName.setLoginUsrName(Users.get(0));
+		LoginUserName.setLoginUsrName(Users.get(1));
 
 		return true;
 
@@ -185,10 +190,17 @@ public class MainLogin extends Application {
 
 			initStage.close();
 
-			MainAdminScreen mainAdminScreen = new MainAdminScreen();
-			mainAdminScreen.start(initStage);
-			initStage.show();
-			primaryStage.close();
+			if (ruleId == 1) {
+				MainAdminScreen mainAdminScreen = new MainAdminScreen();
+				mainAdminScreen.start(initStage);
+				initStage.show();
+				primaryStage.close();
+			} else {
+				MainAgentScreen mainAgentScreen = new MainAgentScreen();
+				mainAgentScreen.start(initStage);
+				initStage.show();
+				primaryStage.close();
+			}
 
 		});
 

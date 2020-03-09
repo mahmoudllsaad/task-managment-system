@@ -143,7 +143,7 @@ public class UpdateAgentAccPassword extends Application {
 			String salt = PasswordUtils.getSalt(30);
 		    String securePassword = PasswordUtils.generateSecurePassword(password, salt);
 		    
-			statement.setString(1, securePassword.concat("-").concat(securePassword));
+			statement.setString(1, securePassword.concat("-").concat(salt));
 			statement.setString(2, userName);
 
 			result = statement.executeUpdate();
